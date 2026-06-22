@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body { font-family: -apple-system, system-ui, sans-serif; width: 260px; margin: 0; padding: 16px; color: #1a1a1a; }
+      h1 { font-size: 14px; margin: 0 0 12px; color: #0d9488; }
+      label { font-size: 12px; color: #555; display: block; margin-bottom: 4px; }
+      input { width: 100%; box-sizing: border-box; padding: 6px 8px; border: 1px solid #ccc; border-radius: 6px; font-size: 13px; margin-bottom: 10px; }
+      button { width: 100%; padding: 8px; background: #0d9488; color: white; border: none; border-radius: 6px; font-size: 13px; cursor: pointer; }
+      button:hover { background: #0b7c72; }
+      .stat { margin-top: 14px; padding-top: 12px; border-top: 1px solid #eee; font-size: 13px; }
+      .stat b { color: #f97316; }
+      .saved { font-size: 11px; color: #16a34a; margin-top: 6px; height: 14px; }
+    </style>
+  </head>
+  <body>
+    <h1>Anosupo Time Tracker</h1>
+    <label for="uid">Your user ID / email</label>
+    <input id="uid" type="text" placeholder="you@anosupo.ai" />
+    <button id="save">Save</button>
+    <div class="saved" id="saved"></div>
+    <div class="stat">
+      Today (this session, unsynced):<br />
+      Active: <b id="active">0m</b> &nbsp; Idle: <span id="idle">0m</span>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
