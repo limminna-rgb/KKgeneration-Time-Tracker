@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Anosupo Time Tracker",
+  "version": "1.0.0",
+  "description": "Tracks active working time on the Anosupo annotation platform.",
+  "permissions": ["idle", "storage", "alarms", "tabs"],
+  "host_permissions": [
+    "https://app.area-detection-staging.kkg-demo-internal.com/*",
+    "https://iuexewhfcfchgxxqiahg.supabase.co/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://app.area-detection-staging.kkg-demo-internal.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Anosupo Time Tracker"
+  }
+}
